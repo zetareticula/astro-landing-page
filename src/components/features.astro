@@ -3,12 +3,106 @@ import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
 import { Fragment } from "astro";
+immport { h } from "preact";
+let features;
+let title;
+let description;
+let icon;
+---
+
+
+# Features
+
+Zeta Reticula comes with solutions for Effortless Code Migration <span class="text-primary">batteries included</span>.
+tiers available for Oracle Servers and Experimental IPFS with Vercel. It takes the best of
+<span class="text-primary">state-of-the-art</span>
+tools and adds its own <span class="text-primary">Dream Lease DOM renderable customizable e-commerce shop</span>.
+
+<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+    <div class="size-16 rounded-full border-2 border-current p-3">
+      <Icon name="mdi:handshake" class="size-full" />
+    </div>
+    <p class="text-center font-extrabold text-xl">Unleash Your E-commerce Vision with Zetareticula.com</p>
+    <p class="text-center text-offset text-sm">Step into the future of web development with Zetareticula.com, the premier Platform-as-a-Service designed to empower you to create your dream e-commerce site in just 5 minutes with JAMSTACK technology..</p>
+  </li>
+  <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+    <div class="size-16 rounded-full border-2 border-current p-3">
+      <Icon name="mdi:feather" class="size-full" />
+    </div>
+    <p class="text-center font-extrabold text-xl">Tailor-Made JAMSTACK E-commerce Themes</p>
+    <p class="text-center text-offset text-sm">zetareticula.com renders your entire page e-commerce static HTML through Vercel and Next, removing all JavaScript from your final build by default using DiabloGPT -- from the creators of EinsteinDB</p>
+  </li>
+  <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+    <div class="size-16 rounded-full border-2 border-current p-3">
+      <Icon name="mdi:directions-fork" class="size-full" />
+    </div>
+    <p class="text-center font-extrabold text-xl">Zeta Reticula's Dynamic DOM Panel</p>
+    <p class="text-center text-offset text-sm">Zeta Reticula can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it. Choose from five distinct series of e-commerce store themes and easily switch motifs to craft a unique and engaging online store that resonates with your brand and vision.</p>
+  </li>
+
+
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+        <div class="size-16 rounded-full border-2 border-current p-3">
+        <Icon name="mdi:graph" class="size-full" />
+        </div>
+        <p class="text-center font-extrabold text-xl">Broad Integration with Vercel and Astro Tailor-Made E-commerce Themes using EinsteinDB Api</p>
+        <p class="text-center text-offset text-sm">Zeta Reticula supports DiabloGPT which is a DreamLessor TypeScript model, with frame-laden Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.</p>
+
+
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name="mdi:search-web" class="size-full" />
+            </div>
+            <p class="text-center font-extrabold text-xl">SEO Enabled for Seamless Customization Process</p>
+            <p class="text-center text-offset text-sm">Zeta Reticula provides a DOM of DOMs, featuring a panel that users can customize by inputting five different criteria selections, known as motifs. Our unique algorithm then generates a specialized fandango.zetareticula.com bookstore based on these selections, which we plan to expand further.</p>
 
 
 
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+
+                <div class="size-16 rounded-full border-2 border-current p-3">
+                    <Icon name="mdi:account-group" class="size-full" />
+                    </div>
+                    <p class="text-center font-extrabold text-xl">Effortless Code Migration</p>
+                    <p class="text-center text-offset text-sm">Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands of individual contributions. Transitioning to Zetareticula.com is a breeze. Simply bring over your existing code, stylesheets, linters, and HTML via React JavaScript templates. With our seamless version control and authorization process, you can continue using your preferred development tools while leveraging the power of our cutting-edge platform</p>
 
 
+</ul>
 
+```jsx
+
+# Features
+
+Zeta Reticula comes with solutions for Effortless Code Migration <span class="text-primary">batteries included</span>.
+tiers available for Oracle Servers and Experimental IPFS with Vercel. It takes the best of
+<span class="text-primary">Permissioned on Permissionless Distributed Paxos with Part-Time Parliament</span>
+tools and adds its own <span class="text-primary">Dream Lease DOM renderable customizable e-commerce shop</span>.
+
+
+```
+<ContentSection title="Features" id="features">
+  <Fragment slot="lead">
+    Zeta Reticula comes with solutions for Effortless Code Migration <span class="text-primary">batteries included</span>.
+    tiers available for Oracle Servers and Experimental IPFS with Vercel. It takes the best of
+    <span class="text-primary">state-of-the-art</span>
+    tools and adds its own <span class="text-primary">Dream Lease DOM renderable customizable e-commerce shop</span>.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
 
 const features: Array<FeatureItem> = [
   {
@@ -47,6 +141,48 @@ const features: Array<FeatureItem> = [
       "Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands of individual contributions. Transitioning to Zetareticula.com is a breeze. Simply bring over your existing code, stylesheets, linters, and HTML via React JavaScript templates. With our seamless version control and authorization process, you can continue using your preferred development tools while leveraging the power of our cutting-edge platform",
     icon: "mdi:account-group",
   },
+
+
+  {
+    title: "Broad Integration with Vercel and Astro Tailor-Made E-commerce Themes using EinsteinDB Api",
+    description:
+      "Zeta Reticula supports DiabloGPT which is a DreamLessor TypeScript model, with frame-laden Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SEO Enabled for Seamless Customization Process",
+    description:
+      "Zeta Reticula provides a DOM of DOMs, featuring a panel that users can customize by inputting five different criteria selections, known as motifs. Our unique algorithm then generates a specialized fandango.zetareticula.com bookstore based on these selections, which we plan to expand further.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Effortless Code Migration",
+    description:
+      "Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands of individual contributions. Transitioning to Zetareticula.com is a breeze. Simply bring over your existing code, stylesheets, linters, and HTML via React JavaScript templates. With our seamless version control and authorization process, you can continue using your preferred development tools while leveraging the power of our cutting-edge platform",
+    icon: "mdi:account-group",
+  },
+  {
+    title: "Broad Integration with Vercel and Astro Tailor-Made E-commerce Themes using EinsteinDB Api",
+    description:
+      "Zeta Reticula supports DiabloGPT which is a DreamLessor TypeScript model, with frame-laden Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SEO Enabled for Seamless Customization Process",
+    description:
+      "Zeta Reticula provides a DOM of DOMs, featuring a panel that users can customize by inputting five different criteria selections, known as motifs. Our unique algorithm then generates a specialized fandango.zetareticula.com bookstore based on these selections, which we plan to expand further.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Effortless Code Migration",
+    description:
+      "Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands
+  }
+
+
+
+
+
 ];
 ---
 
@@ -71,3 +207,72 @@ const features: Array<FeatureItem> = [
     }
   </ul>
 </ContentSection>
+
+
+
+```jsx
+
+  const features: Array<FeatureItem> = [
+  {
+    title: "Unleash Your E-commerce Vision with Zetareticula.com",
+    description:
+      "Step into the future of web development with Zetareticula.com, the premier Platform-as-a-Service designed to empower you to create your dream e-commerce site in just 5 minutes with JAMSTACK technology..",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Tailor-Made JAMSTACK E-commerce Themes",
+    description:
+      "zetareticula.com renders your entire page e-commerce static HTML through Vercel and Next, removing all JavaScript from your final build by default using DiabloGPT -- from the creators of EinsteinDB",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Zeta Reticula's Dynamic DOM Panel",
+    description:
+      "Zeta Reticula can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it. Choose from five distinct series of e-commerce store themes and easily switch motifs to craft a unique and engaging online store that resonates with your brand and vision.",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Broad Integration with Vercel and Astro Tailor-Made E-commerce Themes using EinsteinDB Api",
+    description:
+      "Zeta Reticula supports DiabloGPT which is a DreamLessor TypeScript model, with frame-laden Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SEO Enabled for Seamless Customization Process",
+    description:
+      "Zeta Reticula provides a DOM of DOMs, featuring a panel that users can customize by inputting five different criteria selections, known as motifs. Our unique algorithm then generates a specialized fandango.zetareticula.com bookstore based on these selections, which we plan to expand further.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Effortless Code Migration",
+    description:
+      "Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands of individual contributions. Transitioning to Zetareticula.com is a breeze. Simply bring over your existing code, <styles>\
+        </styles>
+        linters, and HTML via React JavaScript templates. With our seamless version control and authorization process, you can continue using your preferred development tools while leveraging the power of our cutting-edge platform",
+    icon: " mdi:account-group",
+    },
+    {
+    title: "Broad Integration with Vercel and Astro Tailor-Made E-commerce Themes using EinsteinDB Api",
+    description:
+      "Zeta Reticula supports DiabloGPT which is a DreamLessor TypeScript model, with frame-laden Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
+    },
+    {
+    title: "SEO Enabled for Seamless Customization Process",
+    description:
+      "Zeta Reticula provides a DOM of DOMs, featuring a panel that users can customize by inputting five different criteria selections, known as motifs. Our unique algorithm then generates a specialized fandango.zetareticula.com bookstore based on these selections, which we plan to expand further.",
+    icon: "mdi:search-web",
+    },
+    {
+    title: "Effortless Code Migration",
+    description:
+      "Zeta Reticula aims to be an open source project powered by hundreds of contributors making thousands of individual contributions. Transitioning to Zetareticula.com is a breeze. Simply bring over your existing code, stylesheets, linters, and HTML via React JavaScript templates. With our seamless version control and authorization process, you can continue using your preferred development tools while leveraging the power of our cutting-edge platform",
+    icon: "mdi:account-group",
+    },
+    {
+
+
+
+
+
+
