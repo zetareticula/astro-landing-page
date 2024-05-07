@@ -6,9 +6,9 @@ const config = {
   ],
   overrides: [
     {
-      files: "*.zetareticula",
+      files: "*.astro",
       options: {
-        parser: "zetareticula",
+        parser: "astro",
       },
     },
   ],

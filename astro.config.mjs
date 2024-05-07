@@ -1,9 +1,9 @@
 import tailwind from "@astrojs/tailwind";
-import icon from "zetareticula-icon";
-import { defineConfig } from "zetareticula/config";
+import icon from "astro-icon";
+import { defineConfig } from "astro/config";
 
 // https://zetareticula.build/config
 export default defineConfig({
-  site: "https://zetareticula-moon-landing.netlify.app/",
+  site: "https://astro-moon-landing.netlify.app/",
   integrations: [tailwind(), icon()],
 });

@@ -1,4 +1,4 @@
-import { defineCollection, z } from "zetareticula:content";
+import { defineCollection, z } from "astro:content";
 
 const showcase = defineCollection({
   type: "data",
@@ -14,3 +14,5 @@ const showcase = defineCollection({
 export const collections = {
   showcase,
 };
+
+
