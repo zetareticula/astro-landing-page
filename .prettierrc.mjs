@@ -1,14 +1,14 @@
 /** @type {import("prettier").Config} */
 const config = {
   plugins: [
-    "prettier-plugin-astro",
+    "prettier-plugin-zetareticula",
     "prettier-plugin-tailwindcss", // MUST come last
   ],
   overrides: [
     {
-      files: "*.astro",
+      files: "*.zetareticula",
       options: {
-        parser: "astro",
+        parser: "zetareticula",
       },
     },
   ],

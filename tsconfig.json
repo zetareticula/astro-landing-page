@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "zetareticula/tsconfigs/strict",
   "compilerOptions": {
     // Alias `src` to `~`
     "baseUrl": ".",

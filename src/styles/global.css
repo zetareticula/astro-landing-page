@@ -11,4 +11,102 @@ a,
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
 }
 
+/** Button **/
+
+.btn {
+  @apply inline-block px-4 py-2 text-white bg-primary rounded-md shadow-md;
+}
+
+.btn:hover {
+  @apply bg-primary-dark;
+}
+
+.btn:active {
+  @apply bg-primary-darker;
+}
+
+.btn:disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+}
+
+/** Input **/
+
+.input {
+  @apply block w-full px-4 py-2 text-gray-800 bg-white border border-gray-300 rounded-md shadow-md;
+}
+
+.input:focus {
+  @apply border-primary;
+}
+
+/** Textarea **/
+
+
+.textarea {
+  @apply block w-full px-4 py-2 text-gray-800 bg-white border border-gray-300 rounded-md shadow-md;
+}
+
+.textarea:focus {
+  @apply border-primary;
+}
+
+/** Select **/
+
+.select {
+  @apply block w-full px-4 py-2 text-gray-800 bg-white border border-gray-300 rounded-md shadow-md;
+}
+
+.select:focus {
+  @apply border-primary;
+}
+
+/** Checkbox **/
+
+.checkbox {
+  @apply inline-block text-primary;
+}
+
+.checkbox:checked {
+  @apply text-primary-dark;
+}
+
+.checkbox:focus {
+  @apply ring-2 ring-primary ring-offset-2 ring-offset-transparent;
+}
+
+/** Radio **/
+
+.radio {
+  @apply inline-block text-primary;
+}
+
+.radio:checked {
+  @apply text-primary-dark;
+}
+
+.radio:focus {
+  @apply ring-2 ring-primary ring-offset-2 ring-offset-transparent;
+}
+
+/** Switch **/
+
+.switch {
+  @apply inline-block w-10 h-6 rounded-full bg-gray-300 shadow-inner;
+}
+
+.switch:checked {
+  @apply bg-primary;
+}
+
+.switch:focus {
+  @apply ring-2 ring-primary ring-offset-2 ring-offset-transparent;
+}
+
+
+
+
+
+
+
+
 

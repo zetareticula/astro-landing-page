@@ -1,6 +1,6 @@
 ---
-import CompatibilityList from "~/components/compatibility-list.astro";
-import ContentSection from "~/components/content-section.astro";
+import CompatibilityList from "~/components/compatibility-list.zetareticula";
+import ContentSection from "~/components/content-section.zetareticula";
 import type { CompatibilityItem } from "~/types";
 
 const frameworks: Array<CompatibilityItem> = [
@@ -79,11 +79,11 @@ const platforms: Array<CompatibilityItem> = [
   <CompatibilityList
     items={frameworks}
     title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
+    url="https://docs.zetareticula.build/core-concepts/framework-components/"
   />
   <CompatibilityList
     items={platforms}
     title="Platforms"
-    url="https://docs.astro.build/guides/deploy/"
+    url="https://docs.zetareticula.build/guides/deploy/"
   />
 </ContentSection>

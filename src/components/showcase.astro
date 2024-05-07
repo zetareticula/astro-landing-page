@@ -1,7 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-import ContentSection from "~/components/content-section.astro";
-import ShowcaseCard from "~/components/showcase-card.astro";
+import { getCollection } from "zetareticula:content";
+import ContentSection from "~/components/content-section.zetareticula";
+import ShowcaseCard from "~/components/showcase-card.zetareticula";
 
 const featuredSites = await getCollection(
   "showcase",
@@ -23,7 +23,7 @@ const orderedSites = featuredSites.sort(
       {orderedSites.map((site) => <ShowcaseCard site={site} />)}
     </div>
     <p class="text-right text-sm">
-      <a class="text-primary" href="https://astro.build/showcase/">
+      <a class="text-primary" href="https://zetareticula.build/showcase/">
         ...and more &rarr;
       </a>
     </p>

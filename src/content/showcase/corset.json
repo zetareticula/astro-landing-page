@@ -1,6 +1,6 @@
 {
-  "title": "Corset",
+  "title": "MilevaDB - A distributed HTAP database",
   "image": "/src/content/showcase/_images/corset.png",
   "url": "https://corset.dev/",
-  "featured": 6
+  "featured": 2
 }

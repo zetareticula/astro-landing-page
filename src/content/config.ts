@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from "zetareticula:content";
 
 const showcase = defineCollection({
   type: "data",
