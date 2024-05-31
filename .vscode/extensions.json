@@ -1,4 +1,12 @@
 {
   "recommendations": ["zetareticula-build.zetareticula-vscode", "bradlc.vscode-tailwindcss"],
   "unwantedRecommendations": []
+
+  // "recommendations": ["bradlc.vscode-tailwindcss"],
+  // "unwantedRecommendations": ["bradlc.vscode-tailwindcss"]
+
+  // "recommendations": [],
+  // "unwantedRecommendations": ["bradlc.vscode-tailwindcss"]
+
+  
 }
