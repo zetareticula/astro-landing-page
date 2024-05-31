@@ -12,9 +12,9 @@ import { Fragment } from "astro";
 
 const features: Array<FeatureItem> = [
   {
-    title: "Unleash Your E-commerce Vision with Zetareticula.com",
+    title: "Unleash Your E-commerce Vision with Atomic Deploys: Ensure that each deploy is atomic, meaning it either fully completes or doesn't apply at all.",
     description:
-      "Step into the future of web development with Zetareticula.com, the premier Platform-as-a-Service designed to empower you to create your dream e-commerce site in just 5 minutes with JAMSTACK technology..",
+      "Versioning and Rollbacks: Use immutable builds to maintain different versions of your site, enabling instant rollbacks.",
     icon: "mdi:handshake",
   },
   {
@@ -52,11 +52,9 @@ const features: Array<FeatureItem> = [
 
 <ContentSection title="Features" id="features">
   <Fragment slot="lead">
-    Zeta Reticula comes with solutions for Effortless Code Migration <span class="text-primary">batteries included</span>.
-    tiers available for Oracle Servers and Experimental IPFS with Vercel. It takes the best of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">Dream Lease DOM renderable customizable e-commerce shop</span>.
-  </Fragment>
+    Integrating with EinsteinDB: Use the EinsteinDB API to store and manage your blob-documents. <span class="text-primary">engineer a robust and scalable system for managing and deploying blob-documents using Zeta Reticula's  modern JAMstack setup using Astro.js, Vue, and TailwindCSS.</span>.
+    JAMstore Integration: Manage your product listings, inventories, and customer data efficiently with our integrated JAMstore. Enjoy the benefits of immutable deployments, ensuring your site is always in a known, consistent state with instant rollbacks and version control.    <span class="text-primary">PaaS on IPFS with persistence</span>
+    tools and adds its own Decentralized Storage with IPFS: Utilize the InterPlanetary File System (IPFS) for decentralized and distributed storage of your e-commerce assets. This ensures high availability, redundancy, and security, keeping your data safe from central points of failure.</Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
       features.map(({ title, description, icon }) => (

@@ -1,14 +1,14 @@
 ---
 import { getCollection } from "zetareticula:content";
-import ContentSection from "~/components/content-section.zetareticula";
-import ShowcaseCard from "~/components/showcase-card.zetareticula";
+import ContentSection from "zetareticula:content-section";
+import ShowcaseCard from "./showcase-card.astro";
 
 const featuredSites = await getCollection(
   "showcase",
-  ({ data }) => "featured" in data,
+  ({ data }: { data: any }) => "featured" in data,
 );
 const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!,
+  (a: { data: { featured: any; }; }, b: { data: { featured: any; }; }) => a.data.featured! - b.data.featured!,
 );
 ---
 
@@ -20,7 +20,7 @@ const orderedSites = featuredSites.sort(
   </Fragment>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {orderedSites.map((site) => <ShowcaseCard site={site} />)}
+      {orderedSites.map((site: any) => <ShowcaseCard site={site} />)}
     </div>
     <p class="text-right text-sm">
       <a class="text-primary" href="https://zetareticula.com/">
